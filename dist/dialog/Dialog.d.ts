@@ -1,0 +1,121 @@
+/// <reference types="react" />
+import DialogLoading from './DialogLoading';
+import DialogTitle from './DialogTitle';
+import DialogButton from './DialogButton';
+import DialogActions from './DialogActions';
+import { DialogProps } from './DialogBase';
+import { RneFunctionComponent } from '../helpers';
+interface Dialog extends RneFunctionComponent<DialogProps> {
+    Loading: typeof DialogLoading;
+    Title: typeof DialogTitle;
+    Actions: typeof DialogActions;
+    Button: typeof DialogButton;
+}
+declare const Dialog: Dialog;
+export { Dialog };
+declare const ThemedDialog: (import("react").FunctionComponent<Pick<Pick<import("..").OverlayProps, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "visible" | "nativeID" | "hitSlop" | "hasTVPreferredFocus" | "tvParallaxProperties" | "transparent" | "pointerEvents" | "removeClippedSubviews" | "collapsable" | "needsOffscreenAlphaCompositing" | "renderToHardwareTextureAndroid" | "focusable" | "shouldRasterizeIOS" | "isTVSelectable" | "tvParallaxShiftDistanceX" | "tvParallaxShiftDistanceY" | "tvParallaxTiltAngle" | "tvParallaxMagnification" | "onStartShouldSetResponder" | "onMoveShouldSetResponder" | "onResponderEnd" | "onResponderGrant" | "onResponderReject" | "onResponderMove" | "onResponderRelease" | "onResponderStart" | "onResponderTerminationRequest" | "onResponderTerminate" | "onStartShouldSetResponderCapture" | "onMoveShouldSetResponderCapture" | "onTouchStart" | "onTouchMove" | "onTouchEnd" | "onTouchCancel" | "onTouchEndCapture" | "isVisible" | "animated" | "animationType" | "onRequestClose" | "onShow" | "presentationStyle" | "supportedOrientations" | "onDismiss" | "onOrientationChange" | "hardwareAccelerated" | "statusBarTranslucent" | "backdropStyle" | "overlayStyle" | "onBackdropPress" | "ModalComponent"> & {
+    children?: import("react").ReactNode;
+    isVisible?: boolean;
+    overlayStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    onBackdropPress?: () => void;
+} & Partial<import("../config").ThemeProps<DialogProps>>, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "visible" | "nativeID" | "hitSlop" | "hasTVPreferredFocus" | "tvParallaxProperties" | "transparent" | "children" | "pointerEvents" | "removeClippedSubviews" | "collapsable" | "needsOffscreenAlphaCompositing" | "renderToHardwareTextureAndroid" | "focusable" | "shouldRasterizeIOS" | "isTVSelectable" | "tvParallaxShiftDistanceX" | "tvParallaxShiftDistanceY" | "tvParallaxTiltAngle" | "tvParallaxMagnification" | "onStartShouldSetResponder" | "onMoveShouldSetResponder" | "onResponderEnd" | "onResponderGrant" | "onResponderReject" | "onResponderMove" | "onResponderRelease" | "onResponderStart" | "onResponderTerminationRequest" | "onResponderTerminate" | "onStartShouldSetResponderCapture" | "onMoveShouldSetResponderCapture" | "onTouchStart" | "onTouchMove" | "onTouchEnd" | "onTouchCancel" | "onTouchEndCapture" | "isVisible" | "animated" | "animationType" | "onRequestClose" | "onShow" | "presentationStyle" | "supportedOrientations" | "onDismiss" | "onOrientationChange" | "hardwareAccelerated" | "statusBarTranslucent" | "backdropStyle" | "overlayStyle" | "onBackdropPress" | "ModalComponent">> & {
+    Loading: import("react").FunctionComponent<Pick<import("./DialogLoading").DialogLoadingProps & Partial<import("../config").ThemeProps<import("./DialogLoading").DialogLoadingProps>>, "loadingStyle" | "loadingProps">> | import("react").ForwardRefExoticComponent<import("./DialogLoading").DialogLoadingProps & Partial<import("../config").ThemeProps<import("./DialogLoading").DialogLoadingProps>>>;
+    Title: import("react").FunctionComponent<Pick<import("./DialogTitle").DialogTitleProps & Partial<import("../config").ThemeProps<import("./DialogTitle").DialogTitleProps>>, "title" | "titleStyle" | "titleProps">> | import("react").ForwardRefExoticComponent<import("./DialogTitle").DialogTitleProps & Partial<import("../config").ThemeProps<import("./DialogTitle").DialogTitleProps>>>;
+    Actions: import("react").FunctionComponent<Pick<import("./DialogActions").DialogActionsProps & Partial<import("../config").ThemeProps<import("./DialogActions").DialogActionsProps>>, "children">> | import("react").ForwardRefExoticComponent<import("./DialogActions").DialogActionsProps & Partial<import("../config").ThemeProps<import("./DialogActions").DialogActionsProps>>>;
+    Button: import("react").FunctionComponent<Pick<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+        title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, string | any | (new (props: any) => import("react").Component<any, any, any>)>) | (new (props: any) => import("react").Component<any, any, any>)>;
+        titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        titleProps?: import("..").TextProps;
+        buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        type?: "solid" | "clear" | "outline";
+        loading?: boolean;
+        loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        loadingProps?: import("react-native").ActivityIndicatorProps;
+        containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        icon?: import("../icons/Icon").IconNode;
+        iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        iconRight?: boolean;
+        linearGradientProps?: object;
+        TouchableComponent?: typeof import("react").Component;
+        ViewComponent?: typeof import("react").Component;
+        disabled?: boolean;
+        disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        raised?: boolean;
+        iconPosition?: "bottom" | "left" | "right" | "top";
+    } & Partial<import("../config").ThemeProps<import("..").ButtonProps>>, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "raised" | "disabled" | "onPress" | "onLongPress" | "activeOpacity" | "delayLongPress" | "delayPressIn" | "delayPressOut" | "hitSlop" | "onBlur" | "onFocus" | "onPressIn" | "onPressOut" | "pressRetentionOffset" | "hasTVPreferredFocus" | "tvParallaxProperties" | "touchSoundDisabled" | "background" | "useForeground" | "type" | "containerStyle" | "disabledStyle" | "title" | "icon" | "titleStyle" | "loading" | "titleProps" | "buttonStyle" | "loadingStyle" | "loadingProps" | "iconContainerStyle" | "iconRight" | "linearGradientProps" | "TouchableComponent" | "ViewComponent" | "disabledTitleStyle" | "iconPosition">> | import("react").ForwardRefExoticComponent<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+        title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, string | any | (new (props: any) => import("react").Component<any, any, any>)>) | (new (props: any) => import("react").Component<any, any, any>)>;
+        titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        titleProps?: import("..").TextProps;
+        buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        type?: "solid" | "clear" | "outline";
+        loading?: boolean;
+        loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        loadingProps?: import("react-native").ActivityIndicatorProps;
+        containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        icon?: import("../icons/Icon").IconNode;
+        iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        iconRight?: boolean;
+        linearGradientProps?: object;
+        TouchableComponent?: typeof import("react").Component;
+        ViewComponent?: typeof import("react").Component;
+        disabled?: boolean;
+        disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        raised?: boolean;
+        iconPosition?: "bottom" | "left" | "right" | "top";
+    } & Partial<import("../config").ThemeProps<import("..").ButtonProps>>>;
+}) | (import("react").ForwardRefExoticComponent<Pick<import("..").OverlayProps, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "visible" | "nativeID" | "hitSlop" | "hasTVPreferredFocus" | "tvParallaxProperties" | "transparent" | "pointerEvents" | "removeClippedSubviews" | "collapsable" | "needsOffscreenAlphaCompositing" | "renderToHardwareTextureAndroid" | "focusable" | "shouldRasterizeIOS" | "isTVSelectable" | "tvParallaxShiftDistanceX" | "tvParallaxShiftDistanceY" | "tvParallaxTiltAngle" | "tvParallaxMagnification" | "onStartShouldSetResponder" | "onMoveShouldSetResponder" | "onResponderEnd" | "onResponderGrant" | "onResponderReject" | "onResponderMove" | "onResponderRelease" | "onResponderStart" | "onResponderTerminationRequest" | "onResponderTerminate" | "onStartShouldSetResponderCapture" | "onMoveShouldSetResponderCapture" | "onTouchStart" | "onTouchMove" | "onTouchEnd" | "onTouchCancel" | "onTouchEndCapture" | "isVisible" | "animated" | "animationType" | "onRequestClose" | "onShow" | "presentationStyle" | "supportedOrientations" | "onDismiss" | "onOrientationChange" | "hardwareAccelerated" | "statusBarTranslucent" | "backdropStyle" | "overlayStyle" | "onBackdropPress" | "ModalComponent"> & {
+    children?: import("react").ReactNode;
+    isVisible?: boolean;
+    overlayStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+    onBackdropPress?: () => void;
+} & Partial<import("../config").ThemeProps<DialogProps>>> & {
+    Loading: import("react").FunctionComponent<Pick<import("./DialogLoading").DialogLoadingProps & Partial<import("../config").ThemeProps<import("./DialogLoading").DialogLoadingProps>>, "loadingStyle" | "loadingProps">> | import("react").ForwardRefExoticComponent<import("./DialogLoading").DialogLoadingProps & Partial<import("../config").ThemeProps<import("./DialogLoading").DialogLoadingProps>>>;
+    Title: import("react").FunctionComponent<Pick<import("./DialogTitle").DialogTitleProps & Partial<import("../config").ThemeProps<import("./DialogTitle").DialogTitleProps>>, "title" | "titleStyle" | "titleProps">> | import("react").ForwardRefExoticComponent<import("./DialogTitle").DialogTitleProps & Partial<import("../config").ThemeProps<import("./DialogTitle").DialogTitleProps>>>;
+    Actions: import("react").FunctionComponent<Pick<import("./DialogActions").DialogActionsProps & Partial<import("../config").ThemeProps<import("./DialogActions").DialogActionsProps>>, "children">> | import("react").ForwardRefExoticComponent<import("./DialogActions").DialogActionsProps & Partial<import("../config").ThemeProps<import("./DialogActions").DialogActionsProps>>>;
+    Button: import("react").FunctionComponent<Pick<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+        title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, string | any | (new (props: any) => import("react").Component<any, any, any>)>) | (new (props: any) => import("react").Component<any, any, any>)>;
+        titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        titleProps?: import("..").TextProps;
+        buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        type?: "solid" | "clear" | "outline";
+        loading?: boolean;
+        loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        loadingProps?: import("react-native").ActivityIndicatorProps;
+        containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        icon?: import("../icons/Icon").IconNode;
+        iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        iconRight?: boolean;
+        linearGradientProps?: object;
+        TouchableComponent?: typeof import("react").Component;
+        ViewComponent?: typeof import("react").Component;
+        disabled?: boolean;
+        disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        raised?: boolean;
+        iconPosition?: "bottom" | "left" | "right" | "top";
+    } & Partial<import("../config").ThemeProps<import("..").ButtonProps>>, "style" | "onLayout" | "testID" | "accessible" | "accessibilityActions" | "accessibilityLabel" | "accessibilityRole" | "accessibilityState" | "accessibilityHint" | "accessibilityValue" | "onAccessibilityAction" | "accessibilityLiveRegion" | "importantForAccessibility" | "accessibilityElementsHidden" | "accessibilityViewIsModal" | "onAccessibilityEscape" | "onAccessibilityTap" | "onMagicTap" | "accessibilityIgnoresInvertColors" | "raised" | "disabled" | "onPress" | "onLongPress" | "activeOpacity" | "delayLongPress" | "delayPressIn" | "delayPressOut" | "hitSlop" | "onBlur" | "onFocus" | "onPressIn" | "onPressOut" | "pressRetentionOffset" | "hasTVPreferredFocus" | "tvParallaxProperties" | "touchSoundDisabled" | "background" | "useForeground" | "type" | "containerStyle" | "disabledStyle" | "title" | "icon" | "titleStyle" | "loading" | "titleProps" | "buttonStyle" | "loadingStyle" | "loadingProps" | "iconContainerStyle" | "iconRight" | "linearGradientProps" | "TouchableComponent" | "ViewComponent" | "disabledTitleStyle" | "iconPosition">> | import("react").ForwardRefExoticComponent<import("react-native").TouchableOpacityProps & import("react-native").TouchableNativeFeedbackProps & {
+        title?: string | import("react").ReactElement<{}, string | ((props: any) => import("react").ReactElement<any, string | any | (new (props: any) => import("react").Component<any, any, any>)>) | (new (props: any) => import("react").Component<any, any, any>)>;
+        titleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        titleProps?: import("..").TextProps;
+        buttonStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        type?: "solid" | "clear" | "outline";
+        loading?: boolean;
+        loadingStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        loadingProps?: import("react-native").ActivityIndicatorProps;
+        containerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        icon?: import("../icons/Icon").IconNode;
+        iconContainerStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        iconRight?: boolean;
+        linearGradientProps?: object;
+        TouchableComponent?: typeof import("react").Component;
+        ViewComponent?: typeof import("react").Component;
+        disabled?: boolean;
+        disabledStyle?: import("react-native").StyleProp<import("react-native").ViewStyle>;
+        disabledTitleStyle?: import("react-native").StyleProp<import("react-native").TextStyle>;
+        raised?: boolean;
+        iconPosition?: "bottom" | "left" | "right" | "top";
+    } & Partial<import("../config").ThemeProps<import("..").ButtonProps>>>;
+});
+export default ThemedDialog;
